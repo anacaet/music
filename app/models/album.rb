@@ -3,5 +3,8 @@ class Album < ActiveRecord::Base
   
   belongs_to :artist
   
-  has_many :songs
+  has_many :songs, :dependent => :destroy
+  
+  validates :name, :presence => true
+  validates :artists_id, :presence => true
 end

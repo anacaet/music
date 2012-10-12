@@ -1,5 +1,13 @@
 %h1 New album
 
-= render 'form'
+=form_for(@album) do |a|
+  %p
+  = a.label :name 
+  = a.text_field :name
+  %p
+  = a.label :artist 
+  = select("album", "artists_id", Artist.all.collect {|p| [ p.name, p.id ] })
+  %p
+  = a.submit
 
 = link_to 'Back', albums_path
