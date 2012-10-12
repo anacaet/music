@@ -8,7 +8,7 @@
   = @song.lenght
 %p
   %b Albums:
-  = @song.albums_id
+  = Album.find(@song.albums_id).name
 
 = link_to 'Edit', edit_song_path(@song)
 \|

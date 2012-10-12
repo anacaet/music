@@ -13,7 +13,7 @@
     %tr
       %td= song.title
       %td= song.lenght
-      %td= song.albums_id
+      %td= Album.find(song.albums_id).name
       %td= link_to 'Show', song
       %td= link_to 'Edit', edit_song_path(song)
       %td= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }

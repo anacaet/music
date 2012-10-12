@@ -37,10 +37,13 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
   end
 
+  def create
+    @album = Album.create( params[:album] )
+  end
   # POST /albums
   # POST /albums.json
   def create
-    @album = Album.new(params[:album])
+    @album = Album.new( params[:album] )
 
     respond_to do |format|
       if @album.save

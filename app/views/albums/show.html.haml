@@ -10,11 +10,10 @@
   %b Genre:
   = @album.genre
 %p
-  %b Data:
-  = @album.data
+  %b Artist:
+  = Artist.find(@album.artists_id).name
 %p
-  %b Artists:
-  = @album.artists_id
+  = image_tag @album.data.url(:medium)
 
 = link_to 'Edit', edit_album_path(@album)
 \|

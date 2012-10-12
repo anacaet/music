@@ -16,8 +16,8 @@
       %td= album.name
       %td= album.year
       %td= album.genre
-      %td= album.data
-      %td= album.artists_id
+      %td= image_tag album.data(:thumb) 
+      %td= Artist.find(album.artists_id).name
       %td= link_to 'Show', album
       %td= link_to 'Edit', edit_album_path(album)
       %td= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }

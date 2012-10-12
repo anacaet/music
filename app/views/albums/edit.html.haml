@@ -1,6 +1,23 @@
 %h1 Editing album
 
-= render 'form'
+=form_for(@album, :html => { :multipart => true }) do |a|
+  %p
+  = a.label :name 
+  = a.text_field :name
+  %p
+  = a.label :artist 
+  = select("album", "artists_id", Artist.all.collect {|p| [ p.name, p.id ] })
+  %p
+  = a.label :year 
+  = a.date_select :year
+  %p
+  = a.label :genre 
+  = a.text_field :genre
+  %p
+  = a.label :photo 
+  = a.file_field :data
+  %p
+  = a.submit
 
 = link_to 'Show', @album
 \|
