@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Music</title>
+  <title>Music Library</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
-
+<!-- START_HIGHLIGHT -->
+<body class='<%= controller.controller_name %>'>
+<!-- END_HIGHLIGHT -->
+<header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+        	<%= link_to "Music Library", artists_path, id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Artist",  artists_path %></li>
+              <li><%= link_to "Album",    albums_path %></li>
+              <li><%= link_to "Song", songs_path %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+ 	<div class="container">
+      <%= yield %>
+    </div>
 </body>
 </html>
