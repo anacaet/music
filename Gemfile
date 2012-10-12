@@ -11,7 +11,7 @@ gem 'execjs'
 
 gem 'therubyracer'
 
-gem 'haml'
+gem "haml-rails"
 
 
 # Gems used only for assets and not required

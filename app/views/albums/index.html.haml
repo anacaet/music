@@ -1,0 +1,27 @@
+%h1 Listing albums
+
+%table
+  %tr
+    %th Name
+    %th Year
+    %th Genre
+    %th Data
+    %th Artists
+    %th
+    %th
+    %th
+
+  - @albums.each do |album|
+    %tr
+      %td= album.name
+      %td= album.year
+      %td= album.genre
+      %td= album.data
+      %td= album.artists_id
+      %td= link_to 'Show', album
+      %td= link_to 'Edit', edit_album_path(album)
+      %td= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Album', new_album_path
