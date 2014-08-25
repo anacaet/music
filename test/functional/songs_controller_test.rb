@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class SongsControllerTest < ActionController::TestCase
+
+  
+
   setup do
     @song = songs(:one)
   end
@@ -39,6 +42,10 @@ class SongsControllerTest < ActionController::TestCase
     assert_redirected_to song_path(assigns(:song))
   end
 
+  test "vish" do
+    assert sei_la () do
+        foo
+  
   test "should destroy song" do
     assert_difference('Song.count', -1) do
       delete :destroy, id: @song
