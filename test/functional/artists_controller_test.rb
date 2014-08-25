@@ -1,4 +1,8 @@
-require 'test_helper'
+a
+a
+a
+
+arequire 'test_helper'
 
 class ArtistsControllerTest < ActionController::TestCase
   setup do
