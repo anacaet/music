@@ -1,3 +1,4 @@
+super pau
 require 'test_helper'
 
 class SongsControllerTest < ActionController::TestCase
